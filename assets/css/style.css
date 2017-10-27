@@ -3,17 +3,29 @@ body {
 	font-size: 20px;
 }
 .jumbotron {
-	background: #8C97A3 !important; 
+	background: #828D99 !important; 
 	text-align: center;
 	color: white !important;
 }
 .panel-black {
-	background: #8C97A3 !important; 	
+	background: #828D99 !important; 	
+
 }
+
+.panel-heading {
+    background-color: #B29592 !important;
+    font-weight: bold !important;
+
+}
+
 .center {
 	margin-left: 40px !important;
 	margin-right: 40px !important;
 }
 th {
 	font-weight: bold !important;
+}
+
+.textCenter {
+   text-align: center !important;   
 }

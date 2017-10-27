@@ -21,21 +21,22 @@
   var destination = "";
   var firstTrain = "";
   var frequency = "";
-
+  var persistData = true;
 
 //--------------------------------------//
+
+
 $("#submit").on("click", function() {
     // Prevent the page from refreshing
     event.preventDefault();
-
-    //Get inputs from the UI form and assign them to variables
+      
     trainName = $("#trainname").val().trim();
     destination = $("#destination").val().trim();
     firstTrain = $("#firsttrain").val().trim();
     frequency = $("#frequency").val().trim();
 
 
-    //Add new data to firebase database
+        //Add new data to firebase database
     database.ref().push({
       trainName: trainName,
       destination: destination,
@@ -43,15 +44,15 @@ $("#submit").on("click", function() {
       frequency: frequency,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
-  
-  //Set the input fields back to their 'blank' state so a user can enter new information
-    $("#trainname").val('');
-    $("#destination").val('');
-    $("#firsttrain").val('');
-    $("#frequency").val('');
 
-  });
+      //Set the input fields back to their 'blank' state so a user can enter new information
+      $("#trainname").val('');
+      $("#destination").val('');
+      $("#firsttrain").val('');
+      $("#frequency").val('');
 
+    //Get inputs from the UI form and assign them to variables
+});
 //---------------------RETRIEVE DATA FROM FIREBASE---------------------------------------------
 
 database.ref().once('value').then(function(snapshot){
@@ -84,15 +85,9 @@ function appender(snap){
       tableRow.append(tableData5);
 
       $('#train-schedule').append(tableRow);
-  }
-}
+    }
 
-        // for (var k = 0; k < rowArray.length; k++) {
-
-        // }
-// database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
-//       // storing the snapshot.val() in a variable for convenience
-//       var sv = snapshot.val();
+};
 
 
 function momentTime(firstT,tFreq) {
@@ -120,13 +115,13 @@ function momentTime(firstT,tFreq) {
 
 };
       
-    //   // Handle the errors
+      // Handle the errors
     // }, 
 
     // function(errorObject) {
     // console.log("Errors handled: " + errorObject.code);
 
-    // });
+
 
 
 

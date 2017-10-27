@@ -71,9 +71,9 @@ function appender(snap){
 
       var tableData1 = $('<td>').text(snap[i].trainName);
       var tableData2 = $('<td>').text(snap[i].destination);
-      var tableData3 = $('<td>').text(snap[i].frequency);
+      var tableData3 = $('<td class="textCenter">').text(snap[i].frequency);
       var tableData4 = $('<td>').text(momentArray[0]);
-      var tableData5 = $('<td>').text(momentArray[1])
+      var tableData5 = $('<td class="textCenter">').text(momentArray[1])
 
 
       console.log("Snap! :", snap[i])

@@ -24,6 +24,7 @@
   var persistData = true;
 
 //--------------------------------------//
+//Form validation rules
 
 
 $("#submit").on("click", function() {

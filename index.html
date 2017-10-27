@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <!-- Moment JS Reference -->
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	
+</head>
+<body>
+
+	<div class="center">
+
+		<div class="row">
+			<div class="panel panel-black">
+				<div class="jumbotron">
+						<h1 id="title">Train Schedule</h1>
+						<h3 id="subtitle">A Comprehensive Fake Train Schedule</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Current Train Schedule</div>
+				<div class="panel-body">
+   
+				   <table class = "table" id="train-schedule">
+				      <tr>
+				         <th id="tName">Train Name</th>
+				         <th id="tDestination">Destination</th>
+				         <th id="tFrequency">Frequency (min)</th>
+				         <th id="tNextArrival">Next Arrival</th>
+				         <th id="tTimeAway">Time Away (min)</th>
+				      </tr>
+
+				      <tr>
+				      	
+				      </tr>
+				      
+				  <!-- Need to use JQRY to create tables on the fly -->				      
+				   </table>
+				   
+					<div>
+						<p id="object"></p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Current Train Schedule</div>
+				 <div class="panel-body">
+				 	<form>
+
+					  <div class="form-group">
+					    <label for="trainname">Train Name</label>
+					    <input type="trainname" class="form-control" id="trainname">
+					  </div>
+
+					  <div class="form-group">
+					    <label for="destination">Destination</label>
+					    <input type="destination" class="form-control" id="destination">
+					  </div>
+
+					  <div class="form-group">
+					    <label for="firsttrain">First Train Time (Military)</label>
+					    <input type="firsttrain" class="form-control" id="firsttrain" placeholder="Example 3:23 PM is 15:23">
+					  </div>
+
+					  <div class="form-group">
+					    <label for="frequency">Frequency (min) </label>
+					    <input type="frequency" class="form-control" id="frequency">
+					  </div>
+
+					  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+
+					</form>
+
+				 </div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/train.js"></script>
+</body>
+</html>

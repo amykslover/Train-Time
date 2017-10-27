@@ -1,0 +1,16 @@
+
+.jumbotron {
+	background: black !important; 
+	text-align: center;
+	color: white !important;
+}
+.panel-black {
+	background: black !important; 	
+}
+.center {
+	margin-left: 40px !important;
+	margin-right: 40px !important;
+}
+th {
+	font-weight: bold !important;
+}
